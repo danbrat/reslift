@@ -1,0 +1,170 @@
+<html>
+<head>
+		<title>Dan's Meats</title>
+		<meta name="author" content ="@danbrat69">
+		<meta name="description" content="Dan's Meats">
+		<meta name="keywords" content="poetry, bushwick, art, dan brat, oulipo">
+</head>
+
+	<script src="js/jquery.js"></script>
+
+	<script>
+
+		//first key down checker 
+		fkd = {};
+
+		mouseOverChecker = false;
+
+		$(document).ready(function(){
+
+			$('#title').on('mouseover', function(){
+				mouseOverChecker = true;
+
+				$(this).animate({'opacity':'0.4'}, 500);
+			});
+
+			$('#title').on('mouseout', function(){
+
+				$(this).animate({'opacity':'.8'}, 500);
+			});
+
+		});
+			
+
+
+	</script>
+
+	<script>
+
+		$(document).ready(function(){
+
+			$(document).keydown(function(event){
+
+					if(typeof fkd[event.keyCode] == "undefined"){
+
+						fkd[event.keyCode] = {'timestamp': Date(), 'times': 1};
+					}
+					else{
+						fkd[event.keyCode]['times'] = fkd[event.keyCode]['times']+1;
+					}
+
+
+				if (event.keyCode == 222){
+
+
+					if(fkd[event.keyCode]['times'] > 1) return;
+					$('.poem').append('<p><3</p>');}
+
+				if (event.keyCode == 73){
+
+					if(fkd[event.keyCode]['times'] > 1) return;
+					$('.poem').append('<p>this is an internet poem</p>');	
+
+					}
+
+
+				});
+
+
+			});
+
+	</script>
+		
+			
+
+<style type="text/css">
+
+
+body {
+
+	background-image: url('images/bg.png');
+	background-size: 78%;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+#title {
+	top: 200px;
+	height: 100px;
+	width: 100px;
+	border-radius: 100px;
+	text-align: center;
+	color: #5EFF7E;
+	background-color: #FF6682;
+	position: fixed;
+	margin: auto;
+	right: 0;
+	left: 0;
+	font-family: Helvetica;
+	opacity: .8;
+
+
+
+}
+
+#randomPoem {
+
+	position: absolute;
+	top:58%;
+	left:78%;
+
+}
+
+
+#yourPoem {
+
+	position: absolute;
+	top:58%;
+	left:5%;
+
+}
+
+</style>
+
+<body>
+
+<div id="title"><br><br>poetree</div>
+<br>
+<br>
+<div id="randomPoem">nah, you dont get it<br>
+
+i wanna have your baby.<br>
+
+throw me in the air and splatter<br>
+
+me with stars your graham-cookies<br>
+
+and milk. spit on me, send me<br>
+
+somewhere then call me back.<br>
+
+you made me late for work and i<br>
+
+dont even know you anymore.</div>
+<div class="poem"></div>
+
+<div id="yourPoem">the stewardess came on the PA<br>
+
+a new destination<br>
+
+a red alarm went off<br>
+
+the plane was crashing<br>
+
+we hit the water<br>
+
+I woke up and there you were<br>
+
+curled up next to me like a cat<br>
+
+dont even know you anymore.</div>
+<div class="poem"></div>
+
+
+
+
+</body>
+
+
+</html>

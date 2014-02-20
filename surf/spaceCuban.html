@@ -1,0 +1,222 @@
+
+<!-- saved from url=(0068)file:///Users/danbrat/Documents/Z%20coded/htmlBasics/spaceCuban.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<script src="./spaceCuban_files/jquery-1.10.1.min.js"></script>
+
+		<script>
+
+			
+			$(document).ready(init);
+
+
+			//defining function
+			function init(){
+				
+				keyListener()
+			}
+
+			//add event listener to html element that detects left or right key
+			//sends data to callback function
+			function keyListener(){
+
+				$('html').on('keydown', keyCallback)
+
+
+			}
+			//callback function for keyListener
+			function keyCallback(e){
+				
+				keyCode=e.keyCode;
+				
+				switch(keyCode){
+
+					case 37:
+					//character position
+						charPos=$('#character').css('left');
+						charPos= charPos.replace('px', '');
+						charPos= parseInt(charPos);
+						//now charPos is a number
+
+						charPos= charPos-20;
+						newPos= charPos +"px";
+						$('#character').css({'left':newPos})
+
+					break;
+
+					case 39:
+						charPos=$('#character').css('left');
+						charPos= charPos.replace('px', '');
+						charPos= parseInt(charPos);
+						//now charPos is a number
+
+						charPos= charPos+20;
+						newPos= charPos +"px";
+						$('#character').css({'left':newPos})
+
+
+					break;
+
+					//up
+					case 38:
+						charPos=$('#character').css('top');
+						charPos= charPos.replace('px', '');
+						charPos= parseInt(charPos);
+						//now charPos is a number
+
+						charPos= charPos-20;
+						newPos= charPos +"px";
+						$('#character').css({'top':newPos})
+
+						
+					break;
+
+					//down
+					case 40:
+						charPos=$('#character').css('top');
+						charPos= charPos.replace('px', '');
+						charPos= parseInt(charPos);
+						//now charPos is a number
+
+						charPos= charPos+20;
+						newPos= charPos +"px";
+						$('#character').css({'top':newPos})
+
+						
+					break;
+
+					case 65:
+					//character position
+						charPos=$('#character').css('left');
+						charPos= charPos.replace('px', '');
+						charPos= parseInt(charPos);
+						//now charPos is a number
+
+						charPos= charPos-20;
+						newPos= charPos +"px";
+						$('#character').css({'left':newPos})
+
+					break;
+
+					case 68:
+						charPos=$('#character').css('left');
+						charPos= charPos.replace('px', '');
+						charPos= parseInt(charPos);
+						//now charPos is a number
+
+						charPos= charPos+20;
+						newPos= charPos +"px";
+						$('#character').css({'left':newPos})
+
+
+					break;
+
+					//up
+					case 87:
+						charPos=$('#character').css('top');
+						charPos= charPos.replace('px', '');
+						charPos= parseInt(charPos);
+						//now charPos is a number
+
+						charPos= charPos-20;
+						newPos= charPos +"px";
+						$('#character').css({'top':newPos})
+
+						
+					break;
+
+					//down
+					case 83:
+						charPos=$('#character').css('top');
+						charPos= charPos.replace('px', '');
+						charPos= parseInt(charPos);
+						//now charPos is a number
+
+						charPos= charPos+20;
+						newPos= charPos +"px";
+						$('#character').css({'top':newPos})
+
+						
+					break;
+				}
+			}
+
+		</script>
+
+		<style>
+			#character{
+				position:absolute;
+				left:500px;
+				top:300px;
+				z-index: 5;
+				
+			}
+
+			#title {
+				color:limegreen;
+				text-align: center;
+				font-size: 100px;
+				font-family: Impact;
+				z-index: 3;
+				position: absolute;
+				top: 1%;
+				left:30%;
+				
+		
+			}
+			#subtitle {
+				color:limegreen;
+				text-align: center;
+				font-size: 40px;
+				font-family: Impact;
+				position: absolute;
+				z-index: 3;
+				top: 20%;
+				left:30%;
+			}
+
+
+			#bg {
+				background-image: url('http://i.imgur.com/0TM8W2V.jpg');
+				height: 100%;
+				width: 100%;
+				background-size: 100%;
+				z-index: 1;
+				background-repeat: no-repeat;
+				position: fixed;
+				top: 0%;
+				left: 0%;
+			}
+						#controls1 {
+				color:limegreen;
+				position: fixed;
+				font-size: 30px;
+				font-family: Impact;
+				z-index: 5;
+				top: 95%;
+				left:0%;
+
+		
+			}
+
+		</style>
+
+	</head>
+
+
+
+	<body style="">
+		<div id="bg"></div>
+		<div id="title">SPACE CUBAN</div>
+		<div id="subtitle">CUBAN SANDWICH IN OUTER SPACE</div>
+			
+		<div id="controls1">use arrow keys or WASD to move</div>
+
+		<div id="character" style="top: 320px;">
+			<img src="./spaceCuban_files/VPYVTGz.png">
+		</div>
+		
+
+	
+
+
+</body></html>
